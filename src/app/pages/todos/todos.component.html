@@ -1,0 +1,15 @@
+<div class="container app-todos">
+    <ul>
+        <li *ngFor="let todo of todoList">
+            <header>
+                <span class="material-icons">
+                    {{(todo.isDone) ? 'check_box': 'check_box_outline_blank'}}
+                    </span>
+                <h4>{{todo.title}}</h4>
+            </header>
+            <div>
+                {{todo.description}} 
+            </div>
+        </li>
+    </ul>
+</div>

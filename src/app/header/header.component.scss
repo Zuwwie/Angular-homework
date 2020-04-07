@@ -1,10 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
 .head{
     border: 1px solid red;
     margin: 0;
     padding: 0;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    color: azure;
+    font-family: cursive;
+    background-color: rgb(31, 65, 179);
+    p{
+        margin: 10px;
+    }
 }
