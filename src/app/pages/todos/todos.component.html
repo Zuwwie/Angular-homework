@@ -1,21 +1,20 @@
 <div class="container app-todos">
-    <ul>
-        <li *ngFor="let todo of todoList">
-            <header>
-                <span class="material-icons">
-                    {{(todo.isDone) ? 'check_box': 'check_box_outline_blank'}}
-                    </span>
-                <h4>{{todo.title}}</h4>
-                <div>
-                    <button>Show/hide details</button>
-                    <button>del</button>
-                </div>
-            </header>
-            <div>
-
-                {{todo.description}} 
-            </div>
-        </li>
-    </ul>
-    <div class="text-center">No Data.</div>
+  <ul *ngIf="todoList">
+    <li *ngFor="let todo of todoList">
+      <header>
+        <span class="material-icons">
+          {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
+        </span>
+        <h4 [class.is-done]="todo.isDone">{{ todo.title }}</h4>
+        <div>
+          <button>Show/hide details</button>
+          <button>del</button>
+        </div>
+      </header>
+      <div>
+        {{ todo.description }}
+      </div>
+    </li>
+  </ul>
+  <div class="text-center noData" *ngIf="!todoList">No Data.</div>
 </div>

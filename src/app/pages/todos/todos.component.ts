@@ -4,31 +4,29 @@ import { Todo } from 'src/app/core/interfaces';
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
-  styleUrls: ['./todos.component.scss']
+  styleUrls: ['./todos.component.scss'],
 })
 export class TodosComponent implements OnInit {
-  todoList: Array<Todo>
-  
-  constructor() {
-    this.todoList = todos
-   }
+  todoList: Array<Todo>;
 
-  ngOnInit(): void {
+  constructor() {
+    this.todoList = todos;
   }
 
+  ngOnInit(): void {}
 }
 
 let todos = [
   {
-    id:1,
+    id: 1,
     title: `Angular`,
     description: ``,
     isDone: false,
   },
   {
-    id:2,
+    id: 2,
     title: `JS`,
     description: `Test`,
     isDone: true,
-  }
-]
+  },
+];
