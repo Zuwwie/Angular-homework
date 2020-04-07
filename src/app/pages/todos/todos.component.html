@@ -6,10 +6,16 @@
                     {{(todo.isDone) ? 'check_box': 'check_box_outline_blank'}}
                     </span>
                 <h4>{{todo.title}}</h4>
+                <div>
+                    <button>Show/hide details</button>
+                    <button>del</button>
+                </div>
             </header>
             <div>
+
                 {{todo.description}} 
             </div>
         </li>
     </ul>
+    <div class="text-center">No Data.</div>
 </div>
