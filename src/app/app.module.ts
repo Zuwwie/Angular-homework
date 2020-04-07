@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { TodosComponent } from './pages/todos/todos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    TodosComponent
+    TodosComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,
