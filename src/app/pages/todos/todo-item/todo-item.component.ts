@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
+import { transition } from '@angular/animations';
 
 @Component({
   selector: 'app-todo-item',

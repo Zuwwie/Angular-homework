@@ -1,19 +1,64 @@
 <div class="app-new-todo">
-  <form>
-    <div class="form-group">
-      <input class="form-control" type="text" placeholder="Todo Title" />
+  <form [formGroup]="newTodoForm">
+    <div class="form-group errors">
+      <input
+        class="form-control"
+        [class.bd-red]="
+          newTodoForm.get('title').invalid &&
+          (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)
+        "
+        type="text"
+        placeholder="Todo Title"
+        formControlName="title"
+      />
+      <div
+        *ngIf="
+          newTodoForm.get('title').invalid &&
+          (newTodoForm.get('title').dirty || newTodoForm.get('title').touched)
+        "
+        class="text-right error"
+      >
+        <span *ngIf="newTodoForm.get('title').errors.required"
+          >Input is required.</span
+        >
+        <span *ngIf="newTodoForm.get('title').errors.minlength">
+          Min lenght 3.</span
+        >
+      </div>
     </div>
-    <div class="form-group">
+    <div class="form-group textarea">
       <textarea
         rows="3"
         class="form-control"
         type="text"
         placeholder="Todo Description"
+        formControlName="description"
+        [class.bd-red]="
+          newTodoForm.get('description').invalid &&
+          (newTodoForm.get('description').dirty ||
+            newTodoForm.get('description').touched)
+        "
       ></textarea>
+      <div
+        class="text-right error"
+        *ngIf="
+          newTodoForm.get('description').invalid &&
+          (newTodoForm.get('description').dirty ||
+            newTodoForm.get('description').touched)
+        "
+      >
+        <span>Min lenght 5.</span>
+      </div>
     </div>
     <footer>
       <div class="save">
-        <button class="btn btn-primary">Save</button>
+        <button
+          class="btn btn-primary"
+          [disabled]="newTodoForm.invalid"
+          (click)="onSubmit()"
+        >
+          Save
+        </button>
       </div>
     </footer>
   </form>
