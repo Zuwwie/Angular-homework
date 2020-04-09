@@ -1,17 +1,23 @@
 <li>
   <header>
-    <span class="material-icons">
-      {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
-    </span>
-    <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>
+    <div>
+      <span class="material-icons">
+        {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
+      </span>
+      <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>
+    </div>
     <div class="button">
-      <button *ngIf="!todo.isDone" (click)="toggleDetails()" class="details">
+      <button
+        *ngIf="!todo.isDone"
+        (click)="toggleDetails()"
+        class="btn btn-primary details"
+      >
         Show/hide details
       </button>
-      <button *ngIf="todo.isDone" class="details blok">
+      <button *ngIf="todo.isDone" class="details blok btn btn-primary">
         Show/hide details
       </button>
-      <button class="del">DELL</button>
+      <button class="del btn btn-primary">DELL</button>
     </div>
   </header>
   <div *ngIf="isShowDetails">
