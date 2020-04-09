@@ -20,7 +20,7 @@ let todos = [
   {
     id: 1,
     title: `Angular`,
-    description: ``,
+    description: `123`,
     isDone: false,
   },
   {

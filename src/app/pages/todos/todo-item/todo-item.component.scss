@@ -1,3 +1,57 @@
+* {
+  box-sizing: border-box;
+}
 .is-done {
   text-decoration: line-through;
+}
+.del {
+  border: 2px solid red;
+  font-size: large;
+  color: red;
+  background-color: white;
+  height: 26px;
+  width: 70px;
+  border-radius: 30px;
+  padding: 3px;
+  // margin: 0 auto;
+  text-align: center;
+}
+.details {
+  border: 2px solid black;
+  font-size: medium;
+  color: black;
+  background-color: white;
+  height: 26px;
+  width: 200px;
+  border-radius: 30px;
+  padding: 3px;
+  // margin: 0 auto;
+  text-align: center;
+  margin-right: 20px;
+}
+.blok {
+  color: silver;
+  border-color: silver;
+}
+li {
+  list-style: none;
+}
+h4 {
+  margin: 0;
+}
+.name {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 400;
+}
+.button {
+  margin: 6px auto 10px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  // transition: 2s;
+}
+header {
+  margin-top: 16px;
 }

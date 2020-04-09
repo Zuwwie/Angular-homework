@@ -3,12 +3,15 @@
     <span class="material-icons">
       {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
     </span>
-    <h4 [class.is-done]="todo.isDone">{{ todo.title }}</h4>
-    <div>
-      <button (click)="toggleDetails()">
+    <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>
+    <div class="button">
+      <button *ngIf="!todo.isDone" (click)="toggleDetails()" class="details">
         Show/hide details
       </button>
-      <button>del</button>
+      <button *ngIf="todo.isDone" class="details blok">
+        Show/hide details
+      </button>
+      <button class="del">DELL</button>
     </div>
   </header>
   <div *ngIf="isShowDetails">
