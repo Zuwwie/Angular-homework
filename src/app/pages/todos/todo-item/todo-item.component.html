@@ -17,7 +17,9 @@
       <button *ngIf="todo.isDone" class="details blok btn btn-primary">
         Show/hide details
       </button>
-      <button class="del btn btn-primary">DELL</button>
+      <button class="del btn btn-primary" (click)="deleteTodo(todo.id)">
+        DELL
+      </button>
     </div>
   </header>
   <div *ngIf="isShowDetails">
