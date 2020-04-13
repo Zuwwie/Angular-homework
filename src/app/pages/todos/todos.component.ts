@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
+import { TodoService } from 'src/app/core/services/todo/todo.service';
 
 @Component({
   selector: 'app-todos',
@@ -9,24 +10,9 @@ import { Todo } from 'src/app/core/interfaces';
 export class TodosComponent implements OnInit {
   todoList: Array<Todo>;
 
-  constructor() {
-    this.todoList = todos;
+  constructor(private todoService: TodoService) {
+    this.todoList = this.todoService.getTodoData();
   }
 
   ngOnInit(): void {}
 }
-
-let todos = [
-  {
-    id: 1,
-    title: `Angular`,
-    description: `123`,
-    isDone: false,
-  },
-  {
-    id: 2,
-    title: `JS`,
-    description: `Test`,
-    isDone: true,
-  },
-];

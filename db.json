@@ -1,0 +1,16 @@
+{
+    "todos": [
+        {
+            "id": 1,
+            "title": "Angular",
+            "description": 123,
+            "isDone": false
+        },
+        {
+            "id": 2,
+            "title": "JS",
+            "description": "Test",
+            "isDone": true
+        }
+    ]
+}
