@@ -1,7 +1,7 @@
 <li>
   <header>
     <div>
-      <span class="material-icons">
+      <span class="material-icons" (click)="toggleTodo()">
         {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
       </span>
       <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>

@@ -1,7 +1,13 @@
 <div class="container app-todos">
   <app-new-todo></app-new-todo>
   <ul *ngIf="todoList">
-    <app-todo-item *ngFor="let item of todoList" [todo]="item"></app-todo-item>
+    <app-todo-item
+      *ngFor="let item of todoList"
+      [todo]="item"
+      (delete)="deleteTodo($event)"
+      (update)="updateTodo($event)"
+    ></app-todo-item>
   </ul>
   <div class="text-center noData" *ngIf="!todoList">No Data.</div>
+  <!-- <div class="text-center noData" *ngIf="todos === []">No Data.</div> -->
 </div>
