@@ -4,13 +4,15 @@
       "id": 1,
       "title": "Angular",
       "description": 123,
-      "isDone": true
+      "isDone": true,
+      "priority": "Low"
     },
     {
       "id": 2,
       "title": "JS",
       "description": "Test",
-      "isDone": false
+      "isDone": false,
+      "priority": "High"
     }
   ]
 }

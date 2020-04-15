@@ -26,6 +26,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.0.2",
     "bootstrap": "^4.4.1",
     "bootstrap-css-only": "^4.4.1",
+    "json-server-schematics": "^1.0.1",
     "material-design-icons": "file:material-design-icons",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

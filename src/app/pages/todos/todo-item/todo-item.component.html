@@ -7,6 +7,8 @@
       <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>
     </div>
     <div class="button">
+      <span class="priority text-center">{{ todo.priority }}</span>
+
       <button
         *ngIf="!todo.isDone"
         (click)="toggleDetails()"

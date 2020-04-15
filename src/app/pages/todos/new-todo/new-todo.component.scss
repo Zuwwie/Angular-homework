@@ -4,19 +4,24 @@
 .save {
   text-align: right;
   margin-top: 16px;
+  padding-left: 10px;
 }
 .error {
   color: red;
-  margin-top: 5px;
+  padding-top: -18px;
   margin-right: 10px;
+  height: 0px;
 }
 .errors {
   height: 60px;
 }
 .textarea {
-  height: 100px;
+  margin-bottom: 30px;
 }
 .bd-red {
   border-color: red;
   color: red;
+}
+.btn-primary {
+  width: 64px;
 }
