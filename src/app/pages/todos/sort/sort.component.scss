@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 73px;
+    margin-right: 258px;
+    color: black;
+}
+.btn {
+    width: 146px;
+    margin-bottom: 20px;
+}
+.name {
+    margin-top: 10px;
+    // height: 0;
+}

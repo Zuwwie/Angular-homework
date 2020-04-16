@@ -11,6 +11,7 @@ import { TodosComponent } from './pages/todos/todos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoItemComponent } from './pages/todos/todo-item/todo-item.component';
 import { NewTodoComponent } from './pages/todos/new-todo/new-todo.component';
+import { SortComponent } from './pages/todos/sort/sort.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { NewTodoComponent } from './pages/todos/new-todo/new-todo.component';
     TodosComponent,
     TodoItemComponent,
     NewTodoComponent,
+    SortComponent,
   ],
   imports: [
     BrowserModule,

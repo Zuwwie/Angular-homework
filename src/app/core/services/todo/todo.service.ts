@@ -12,7 +12,7 @@ export class TodoService {
   getTodos(): Observable<Array<Todo>> {
     return this.http.get<Array<Todo>>(`${this.url}`);
   }
-  deleteTodo(todoId: Number): Observable<Array<Todo>> {
+  deleteTodo(todoId: number): Observable<Array<Todo>> {
     return this.http.delete<Array<Todo>>(`${this.url}/${todoId}`);
   }
   updateTodo(todo: Todo) {
@@ -20,6 +20,9 @@ export class TodoService {
   }
   addTodo(todo: Todo) {
     return this.http.post<Array<Todo>>(`${this.url}`, todo);
+  }
+  sortTodo(): Observable<Array<Todo>> {
+    return this.http.get<Array<Todo>>('http://localhost:3000/todos/?_sort=id');
   }
 }
 

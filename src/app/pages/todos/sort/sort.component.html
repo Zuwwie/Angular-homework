@@ -1,0 +1,27 @@
+<header>
+  <div class="name">
+    <span>Name:</span>
+  </div>
+  <div>
+    <button
+      class="btn"
+      [ngClass]="{
+        'btn-info': z == 1,
+        'btn-danger': z == 2,
+        'btn-success': z == 3
+      }"
+      (click)="sortTodos()"
+    >
+      Priority:
+      <span class="priority" *ngIf="z == 1">
+        (default)
+      </span>
+      <span class="priority" *ngIf="z == 2">
+        (high)
+      </span>
+      <span class="priority" *ngIf="z == 3">
+        (low)
+      </span>
+    </button>
+  </div>
+</header>

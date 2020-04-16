@@ -27,10 +27,18 @@ export class TodosComponent implements OnInit {
       this.getTodos();
     });
   }
-  addTodo(todo: Todo) : void{
+  addTodo(todo: Todo): void {
     this.todoService.addTodo(todo).subscribe(() => {
       this.getTodos();
     });
+  }
+  sortToDO() {
+    this.todoService.sortTodo().subscribe(
+      (data) => {
+        this.todoList = data;
+      },
+      (error) => {}
+    );
   }
 
   private getTodos(): void {
