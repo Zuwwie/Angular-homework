@@ -31,3 +31,32 @@ export class TodoItemComponent implements OnInit {
     this.delete.emit(todoId);
   }
 }
+
+// {
+//   "id": 1,
+//   "title": "Angular",
+//   "description": 123,
+//   "isDone": false,
+//   "priority": "Low"
+// },
+// {
+//   "id": 2,
+//   "title": "JS",
+//   "description": "Test",
+//   "isDone": false,
+//   "priority": "High"
+// },
+// {
+//   "id": 3,
+//   "title": "JS",
+//   "description": "Test",
+//   "isDone": false,
+//   "priority": "Medium"
+// },
+// {
+//   "id": 4,
+//   "title": "JS",
+//   "description": "Test",
+//   "isDone": true,
+//   "priority": "Low"
+// }
