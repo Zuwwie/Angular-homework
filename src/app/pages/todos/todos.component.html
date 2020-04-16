@@ -1,6 +1,7 @@
 <div class="container app-todos">
   <app-new-todo (newTodo)="addTodo($event)"></app-new-todo>
-  <app-sort *ngIf="todoList.length != 0"></app-sort>
+  <!-- <app-sort *ngIf="todoList.length != 0"></app-sort> -->
+  <app-sort></app-sort>
   <ul *ngIf="todoList">
     <app-todo-item
       *ngFor="let item of todoList"
