@@ -8,7 +8,8 @@
       [ngClass]="{
         'btn-info': z == 1,
         'btn-danger': z == 2,
-        'btn-success': z == 3
+        'btn-success': z == 3,
+        'btn-warning': z == 4
       }"
       (click)="sortTodos()"
     >
@@ -20,6 +21,9 @@
         (high)
       </span>
       <span class="priority" *ngIf="z == 3">
+        (low)
+      </span>
+      <span class="priority" *ngIf="z == 4">
         (low)
       </span>
     </button>

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+// import { Observable } from 'rxjs';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
 import { TodosComponent } from '../todos.component';
 
@@ -15,7 +15,7 @@ export class SortComponent implements OnInit {
   todoList: Array<Todo>;
 
   // @Output()
-  private url = 'http://localhost:3000/todos';
+  // private url = 'http://localhost:3000/todos';
 
   z: number;
   constructor(
@@ -24,17 +24,22 @@ export class SortComponent implements OnInit {
     private todosComponent: TodosComponent
   ) {}
   sortTodos() {
-    if (this.z < 3) {
+    if (this.z < 4) {
       this.z++;
     } else {
       this.z = 1;
     }
     if (this.z === 1) {
+      this.todosComponent.sortToDO(``);
     }
     if (this.z === 2) {
-      // this.todoService.sortTodo().subscribe(() => {
-      // });
-      this.todosComponent.sortToDO();
+      this.todosComponent.sortToDO(`hi`);
+    }
+    if (this.z === 3) {
+      this.todosComponent.sortToDO(`lo`);
+    }
+    if (this.z === 4) {
+      this.todosComponent.sortToDO(`me`);
     }
   }
   ngOnInit(): void {

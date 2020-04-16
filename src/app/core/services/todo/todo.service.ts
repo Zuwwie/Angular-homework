@@ -21,11 +21,11 @@ export class TodoService {
   addTodo(todo: Todo) {
     return this.http.post<Array<Todo>>(`${this.url}`, todo);
   }
-  sortTodo(): Observable<Array<Todo>> {
-    return this.http.get<Array<Todo>>('http://localhost:3000/todos/?_sort=id');
+  sortTodo(word): Observable<Array<Todo>> {
+    return this.http.get<Array<Todo>>(`${this.url}?priority_like=^${word}.`);
   }
 }
-
+// 'http://localhost:3000/todos/?_sort=priority&_order=DESC'
 // {
 //   "id": 2,
 //   "title": "JS",

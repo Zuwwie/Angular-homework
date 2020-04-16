@@ -32,8 +32,8 @@ export class TodosComponent implements OnInit {
       this.getTodos();
     });
   }
-  sortToDO() {
-    this.todoService.sortTodo().subscribe(
+  sortToDO(word: string) {
+    this.todoService.sortTodo(word).subscribe(
       (data) => {
         this.todoList = data;
       },
