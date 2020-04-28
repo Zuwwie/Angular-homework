@@ -4,7 +4,9 @@
       <span class="material-icons" (click)="toggleTodo()">
         {{ todo.isDone ? "check_box" : "check_box_outline_blank" }}
       </span>
-      <span class="name" [class.is-done]="todo.isDone">{{ todo.title }}</span>
+      <span class="name" [class.is-done]="todo.isDone" appHighlight>{{
+        todo.title
+      }}</span>
     </div>
     <div class="button">
       <span class="priority text-center">{{ todo.priority }}</span>
