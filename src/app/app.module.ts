@@ -16,6 +16,9 @@ import { HighlightDirective } from './shared/directives/highlight/highlight.dire
 import { FilterTodoPipe } from './shared/pipes/filterTodo/filter-todo.pipe';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AboutComponent } from './pages/about/about.component';
+import { AboutProjectComponent } from './pages/about/about-project/about-project.component';
+import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+import { UserComponent } from './pages/about/user/user.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { AboutComponent } from './pages/about/about.component';
     FilterTodoPipe,
     PageNotFoundComponent,
     AboutComponent,
+    AboutProjectComponent,
+    AboutUsComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
