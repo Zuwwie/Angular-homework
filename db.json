@@ -21,5 +21,15 @@
       "isDone": true,
       "priority": "Low"
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Nazar",
+      "img": "https://randomuser.me/api/portraits/women/9.jpg",
+      "email": "zoe.zhang@example.com",
+      "phone": "(168)-086-4604",
+      "description": "Eastern Time (US & Canada), Bogota, Lima"
+    }
   ]
 }
