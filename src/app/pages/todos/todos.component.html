@@ -1,6 +1,12 @@
 <div class="container app-todos">
-  <app-new-todo (newTodo)="addTodo($event)"></app-new-todo>
+  <!-- <app-new-todo (newTodo)="addTodo($event)"></app-new-todo> -->
+
   <!-- <app-sort *ngIf="todoList.length != 0"></app-sort> -->
+
+  <button type="button" class="btn btn-primary" (click)="openModal()">
+    Create new ToDo
+  </button>
+
   <form>
     <div class="form-group">
       <input
@@ -13,6 +19,7 @@
       />
     </div>
   </form>
+
   <app-sort></app-sort>
   <ul *ngIf="todoList">
     <app-todo-item

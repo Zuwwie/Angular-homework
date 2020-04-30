@@ -20,6 +20,9 @@ import { AboutProjectComponent } from './pages/about/about-project/about-project
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
 import { UserComponent } from './pages/about/user/user.component';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+// import { EditTodoComponent } from './pages/todos/edit-todo/edit-todo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,7 @@ import { UserComponent } from './pages/about/user/user.component';
     AboutProjectComponent,
     AboutUsComponent,
     UserComponent,
+    // EditTodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,8 +49,10 @@ import { UserComponent } from './pages/about/user/user.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ModalModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [NewTodoComponent],
 })
 export class AppModule {}

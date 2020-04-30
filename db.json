@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Angular",
       "description": 123,
-      "isDone": true,
+      "isDone": false,
       "priority": "Low"
     },
     {
@@ -25,11 +25,19 @@
   "user": [
     {
       "id": 1,
-      "name": "Nazar",
+      "name": "Ana",
       "img": "https://randomuser.me/api/portraits/women/9.jpg",
       "email": "zoe.zhang@example.com",
       "phone": "(168)-086-4604",
       "description": "Eastern Time (US & Canada), Bogota, Lima"
+    },
+    {
+      "id": 2,
+      "name": "Darya",
+      "img": "https://randomuser.me/api/portraits/women/6.jpg",
+      "email": "gonca.erez@example.com",
+      "phone": "(943)-440-7098",
+      "description": "Eniwetok, Kwajalein"
     }
   ]
 }

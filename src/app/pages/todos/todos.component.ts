@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { NewTodoComponent } from './new-todo/new-todo.component';
 
 @Component({
   selector: 'app-todos',
@@ -10,11 +12,29 @@ import { TodoService } from 'src/app/core/services/todo/todo.service';
 export class TodosComponent implements OnInit {
   todoList: Array<Todo>;
   search: string;
+  modalRef: BsModalRef;
 
-  constructor(private todoService: TodoService) {}
+  constructor(
+    private todoService: TodoService,
+    private modalService: BsModalService
+  ) {}
 
   ngOnInit(): void {
     this.getTodos();
+  }
+  openModal() {
+    this.modalRef = this.modalService.show(
+      NewTodoComponent,
+      Object.assign(
+        {},
+        {
+          class: 'gray modal-lg',
+          initialState: {
+            submit: this.addTodo.bind(this),
+          },
+        }
+      )
+    );
   }
 
   updateTodo(todo: Todo): void {

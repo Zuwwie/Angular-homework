@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Todo } from 'src/app/core/interfaces';
+import { BsModalRef } from 'ngx-bootstrap/modal';
 // import { EventEmitter } from 'protractor';
 
 @Component({
@@ -9,12 +10,13 @@ import { Todo } from 'src/app/core/interfaces';
   styleUrls: ['./new-todo.component.scss'],
 })
 export class NewTodoComponent implements OnInit {
-  @Output() newTodo = new EventEmitter<Todo>();
+  // @Output() newTodo = new EventEmitter<Todo>();
 
   newTodoForm: FormGroup;
   isSumbit = false;
+  test: string;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private modalRef: BsModalRef) {}
 
   ngOnInit(): void {
     this.createNewRodoForm();
@@ -26,11 +28,18 @@ export class NewTodoComponent implements OnInit {
       return;
     }
 
-    this.newTodo.emit(this.newTodoForm.value);
+    this.submit(this.newTodoForm.value);
+    // this.newTodo.emit(this.newTodoForm.value);
 
     this.newTodoForm.reset();
     this.isSumbit = false;
+    this.hideModal();
   }
+
+  hideModal() {
+    this.modalRef.hide();
+  }
+
   private createNewRodoForm(): void {
     this.newTodoForm = this.fb.group({
       title: [null, [Validators.required, Validators.minLength(3)]],
@@ -38,4 +47,5 @@ export class NewTodoComponent implements OnInit {
       // isDone: [false]
     });
   }
+  submit(todo: Todo): void {}
 }
