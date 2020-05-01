@@ -38,6 +38,14 @@
       "email": "gonca.erez@example.com",
       "phone": "(943)-440-7098",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, maiores nihil totam fugiat earum sint itaque placeat libero labore! Itaque, ipsa esse illo adipisci perferendis veritatis maxime reiciendis suscipit dolor."
+    },
+    {
+      "id": 3,
+      "name": "Alla",
+      "img": "https://randomuser.me/api/portraits/women/8.jpg",
+      "email": "gonca.erez@example.com",
+      "phone": "(943)-440-7098",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, maiores nihil totam fugiat earum sint itaque placeat libero labore! Itaque, ipsa esse illo adipisci perferendis veritatis maxime reiciendis suscipit dolor."
     }
   ]
 }
