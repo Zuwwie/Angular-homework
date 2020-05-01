@@ -1,10 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .app-about {
     display: flex;
-
-    nav {
-        padding: 24px 0;
-        border-right: 1px solid rgb(139, 118, 118);
-    }
 
     ul {
         margin: 0;
@@ -22,4 +22,9 @@
             color: magenta;
         }
     }
+}
+.nav {
+    padding: 24px 0;
+    border-right: 1px solid rgb(139, 118, 118);
+    width: 150px;
 }

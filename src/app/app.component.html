@@ -1,12 +1,14 @@
 <div class="wrap">
   <app-header></app-header>
-  <li routerLinkActive="active">
-    <a routerLink="todos">Todos</a>
-  </li>
+  <div class="d-flex">
+    <li routerLinkActive="active">
+      <a routerLink="todos">Todos</a>
+    </li>
 
-  <li routerLinkActive="active">
-    <a routerLink="about">About</a>
-  </li>
+    <li routerLinkActive="active">
+      <a routerLink="about">About</a>
+    </li>
+  </div>
   <!-- <app-main></app-main> -->
   <!-- <app-todos></app-todos> -->
   <router-outlet></router-outlet>
