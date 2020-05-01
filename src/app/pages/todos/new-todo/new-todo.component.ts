@@ -44,6 +44,7 @@ export class NewTodoComponent implements OnInit {
     this.newTodoForm = this.fb.group({
       title: [null, [Validators.required, Validators.minLength(3)]],
       description: [null, [Validators.minLength(5), Validators.required]],
+      priority: ['Low'],
       // isDone: [false]
     });
   }

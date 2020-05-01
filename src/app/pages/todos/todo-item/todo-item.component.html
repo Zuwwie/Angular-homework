@@ -10,7 +10,9 @@
     </div>
     <div class="button">
       <span class="priority text-center">{{ todo.priority }}</span>
-
+      <button class="mr-2 btn btn-primary">
+        Update
+      </button>
       <button
         *ngIf="!todo.isDone"
         (click)="toggleDetails()"
