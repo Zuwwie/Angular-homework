@@ -2,6 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
 import { transition } from '@angular/animations';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
+import { NewTodoComponent } from '../new-todo/new-todo.component';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-todo-item',
@@ -12,10 +14,17 @@ export class TodoItemComponent implements OnInit {
   @Input() todo: Todo;
   @Output() delete = new EventEmitter<number>();
   @Output() update = new EventEmitter<Todo>();
+  todoList: Array<Todo>;
+
+  // @Output() up = new EventEmitter<number>();
+  modalRef: BsModalRef;
 
   isShowDetails = false;
 
-  constructor(private todoService: TodoService) {}
+  constructor(
+    private todoService: TodoService,
+    private modalService: BsModalService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -29,6 +38,29 @@ export class TodoItemComponent implements OnInit {
   }
   deleteTodo(todoId: number): void {
     this.delete.emit(todoId);
+  }
+  upTodo(): void {
+    console.log(this.todo);
+    this.modalRef = this.modalService.show(
+      NewTodoComponent,
+      Object.assign(
+        {},
+        {
+          class: 'gray modal-lg',
+          initialState: {
+            mytodo: this.todo,
+            submit: this.updateTodo.bind(this),
+          },
+        }
+      )
+    );
+  }
+  updateTodo(todo: Todo): void {
+    console.log(todo);
+
+    // setTimeout(() => {
+    this.update.emit(todo);
+    // }, 1000);
   }
 }
 

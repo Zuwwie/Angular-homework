@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, Output } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
@@ -13,7 +13,6 @@ export class TodosComponent implements OnInit {
   todoList: Array<Todo>;
   search: string;
   modalRef: BsModalRef;
-
   constructor(
     private todoService: TodoService,
     private modalService: BsModalService
@@ -38,6 +37,7 @@ export class TodosComponent implements OnInit {
   }
 
   updateTodo(todo: Todo): void {
+    console.log(todo);
     this.todoService.updateTodo(todo).subscribe(() => {
       this.getTodos();
     });

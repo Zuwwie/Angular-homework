@@ -15,7 +15,12 @@ export class TodoService {
   deleteTodo(todoId: number): Observable<Array<Todo>> {
     return this.http.delete<Array<Todo>>(`${this.url}/${todoId}`);
   }
+  // editTodo(todo): Observable<Array<Todo>> {
+  //   console.log(`${this.url}/${todo.id}`);
+  //   return this.http.get<Array<Todo>>(`${this.url}/${todo.id}`);
+  // }
   updateTodo(todo: Todo) {
+    // console.log(`${this.url}/${todo.id}, ${todo.title}`);
     return this.http.put<Array<Todo>>(`${this.url}/${todo.id}`, todo);
   }
   addTodo(todo: Todo) {
