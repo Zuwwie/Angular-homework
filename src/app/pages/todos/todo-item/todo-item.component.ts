@@ -59,7 +59,7 @@ export class TodoItemComponent implements OnInit {
     console.log(todo);
 
     // setTimeout(() => {
-    this.update.emit(todo);
+    this.update.emit(this.todo);
     // }, 1000);
   }
 }
