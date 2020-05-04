@@ -3,7 +3,7 @@
 
   <!-- <app-sort *ngIf="todoList.length != 0"></app-sort> -->
 
-  <button type="button" class="btn btn-primary" (click)="openModal()">
+  <button type="button" class="btn btn-primary button" (click)="openModal()">
     Create new ToDo
   </button>
 
@@ -29,6 +29,12 @@
       (update)="updateTodo($event)"
     ></app-todo-item>
   </ul>
+  <div class="button2">
+    <button type="button" class="btn btn-primary" (click)="openModal()">
+      Create new ToDo
+    </button>
+  </div>
+
   <div class="text-center noData" *ngIf="!todoList || todoList.length == 0">
     No Data.
   </div>

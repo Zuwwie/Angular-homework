@@ -9,7 +9,15 @@
       }}</span>
     </div>
     <div class="button">
-      <span class="priority text-center">{{ todo.priority }}</span>
+      <span
+        class="priority text-center"
+        [ngClass]="{
+          'text-danger': todo.priority == 'Hight',
+          'text-success': todo.priority == 'Medium',
+          'text-warning': todo.priority == 'Low'
+        }"
+        >{{ todo.priority }}</span
+      >
       <button class="mr-2 btn btn-primary" (click)="upTodo()">
         Update
       </button>

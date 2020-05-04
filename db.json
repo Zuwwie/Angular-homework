@@ -29,15 +29,9 @@
       "isDone": false
     },
     {
-      "title": "JS123",
-      "description": "Test123",
-      "priority": "Medium",
-      "id": 6
-    },
-    {
-      "id": 7,
-      "title": "2221",
-      "description": "123213",
+      "id": 6,
+      "title": " Taras",
+      "description": "да прям багато часу",
       "priority": "Hight"
     }
   ],
